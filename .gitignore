@@ -1,6 +1,6 @@
 .vscode/
 config/
-node_modules/
+node_modules copy/
 package-lock.json
 package.json
 README.md

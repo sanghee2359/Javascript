@@ -5,11 +5,16 @@ function b() {
 }
 // console.log(b())
 
-function a() {
+function a() {  // before - ES5
     return 1
 }
 
-const a_ES6 = () => 1
+const a_ES6 = () => 1 // after - ES6
 
 console.log(a())
 console.log(a_ES6())
+
+const c = (b = 2) => { // parameters
+    return b
+}
+console.log(c()) 
