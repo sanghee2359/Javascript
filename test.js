@@ -18,3 +18,17 @@ const c = (b = 2) => { // parameters
     return b
 }
 console.log(c()) 
+
+function arrow() {
+    setTimeout(()=>{
+        console.log(this) // 화살표함수에서의 this = arrow{} 
+    }, 1000)
+}
+function not_arrow() {
+    setTimeout(function() {
+        console.log(this) // Node.js에서는 Timeout || browser에서는 Window 를 가리킴
+    })
+}
+
+const p1 = new not_arrow();
+const p2 = new arrow();
