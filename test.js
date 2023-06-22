@@ -84,3 +84,17 @@ const i = [1,2,3,4,5]
 const ret = i.indexOf(4)
 const ret2 = i.findIndex(e => e==4) // findIndex은 조건 파라미터를 가짐
 console.log(ret, ret2)
+
+// 템플릿 문자열 
+// 백틱 문자열 안에 값을 넣어서 문자열 완성하기
+const name = "상희"
+const s = `솔직히 알수록 ${name}은 바보인 것 같아` 
+console.log(s) 
+
+const person = {
+    "age" : 25,
+    "height" : 167
+}
+const tag = `<p>나의 나이는 ${person.age} 입니다.</p>`
+const tag2 = `<p>키는 ${person.height}cm 입니다.</p>`
+console.log(tag, tag2)
