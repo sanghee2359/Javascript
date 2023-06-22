@@ -61,3 +61,26 @@ const numbers = [1, 3, 5, 4]
 const isAllOdd = numbers.every(e => e %2)
 const isSomeOdd = numbers.some(e => e %2)
 console.log(isAllOdd, isSomeOdd)
+
+
+const 조건 = e => e.height >= 180
+const 친구들 = [
+    {"name" : "박종선", "height" : 173},
+    {"name" : "연제호", "height" : 180},
+    {"name" : "박종선", "height" : 190},
+    {"name" : "박종선", "height" : 175}
+]
+const 키180이상친구 = 친구들.find(조건) // 조건에 해당하는 첫번째 요소만 출력
+console.log(키180이상친구) // 연제호 - 190인 친구는 출력 x
+const 키180이상인덱스 = 친구들.findIndex(조건)
+console.log(키180이상인덱스) // 인덱스 0부터 시작
+
+const h = [1,2,3,4,5]
+console.log(h.includes(3)) // ES7문법, ES5의 indexOf보다 고성능
+
+// indexOf를 쓸 때
+// 배열 안에 어떤 요소를 찾고, 그 인덱스를 반환하는 경우
+const i = [1,2,3,4,5]
+const ret = i.indexOf(4)
+const ret2 = i.findIndex(e => e==4) // findIndex은 조건 파라미터를 가짐
+console.log(ret, ret2)
