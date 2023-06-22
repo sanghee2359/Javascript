@@ -98,3 +98,40 @@ const person = {
 const tag = `<p>나의 나이는 ${person.age} 입니다.</p>`
 const tag2 = `<p>키는 ${person.height}cm 입니다.</p>`
 console.log(tag, tag2)
+
+// Syntax omitted
+const age = 25
+const job = "프로그래머"
+const data_used_ES6 = {name, age, job}
+const data_not_used_ES6 = {"name" : name, "age" :age, "job" :job}
+console.log(data_not_used_ES6)
+console.log(data_used_ES6)
+
+// spread operater( ... )
+// 1. rest parameter 
+const j = (b, ...rest) =>{  //함수의 매개변수를 담는 용도
+    console.log(rest)
+}
+j(1,2,3)
+const k = [1, 2, 3]
+const j2 = (a, b, c) => console.log(a, b, c) // 배열을 분해해서 각각 a,b,c로 담기
+j2(...k)
+
+const j3 = [1,2,3,4,5]
+const[head, ...rest] = j3
+console.log(head, rest) // rest는 head를 제외한 나머지 값들이 들어감
+
+// 2. Array Integration
+const l = [1,2,3]
+const m = [4,5,6]
+const n = [...l, ...m]  // l과 m 배열이 통합된 n 배열
+console.log(n)
+
+// 3. Math
+const o = [1,2,3,4]
+console.log(Math.max(...o)) // 배열의 Max값 구할 때 spread 연산자가 필요
+
+// 4. Object duplication
+const p = {"name": "정상희", "age": 25}
+const q = {...p, "height": 167}
+console.log(q)
