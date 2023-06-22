@@ -135,3 +135,29 @@ console.log(Math.max(...o)) // 배열의 Max값 구할 때 spread 연산자가 �
 const p = {"name": "정상희", "age": 25}
 const q = {...p, "height": 167}
 console.log(q)
+
+// 구조 분해
+// 1. swap
+let r = 1;  // 단, 상수 선언 시 세미콜론 추가하지 않으면 error
+let t = 2;
+[r, t] = [t, r]
+console.log(r, t)
+
+// 2. 배열에 요소 담기
+const u = () => [1, 2, 3, 4]
+const[v, w, x] = u() // u배열의 왼쪽부터 차례로 들어감
+console.log(v, w, x)
+
+// 3. 객체 value 쉽게 담기
+// const y = () => { return {"name" : "정상희", "job" : "프로그래머"}}
+const y = () => ({"name2" : "정상희", "job" : "프로그래머"})
+const { name2 } = y()
+console.log(name2)  // 단, 객체의 요소 변수와 이름이 같아야만 한다
+
+const z = [1, 2]
+const [a1, b1] = z
+console.log(a1, b1)
+
+const c2 = {"이름":"정상희", "좋아하는게임":"언더테일"}
+const {이름, 좋아하는게임} = c2     // 집합, 리스트 기호 구분이 필요
+console.log(이름, 좋아하는게임)
